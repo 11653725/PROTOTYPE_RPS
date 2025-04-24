@@ -5,7 +5,7 @@ const insults = [
     "Dokonce i vaši otroci se smějí vašim dovednostem.",
     "Snaž se nezakopnout o svůj vlastní meč.",
     "Je 'loser' tvé pravé jméno?",
-    "Tomu říkáš zbraň?"
+    "Tomu říkáš zbraň?",
     "Pojď more úder!",
     "Bojuješ jako rozmočená bageta.",
     "Tvůj vztek se projevuje, slabochu!",
