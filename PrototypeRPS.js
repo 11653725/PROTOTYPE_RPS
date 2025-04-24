@@ -28,16 +28,17 @@ const insults = [
 
 // The rules: who beats what
 const beats = {
-    rock:     ["scissors", "fire", "sponge", "tree", "gun"],
-    paper:    ["rock", "water", "sponge", "tree", "lightning"],
-    scissors: ["paper", "sponge", "tree", "wind", "water"],
-    fire:     ["paper", "tree", "sponge", "wind", "gun"],
-    wind:     ["water", "fire", "gun", "lightning", "rock"],
-    water:    ["fire", "rock", "gun", "scissors", "tree"],
-    sponge:   ["water", "paper", "wind", "gun", "lightning"],
-    tree:     ["water", "gun", "lightning", "rock", "scissors"],
-    lightning:["water", "fire", "scissors", "rock", "sponge"],
-    gun:      ["paper", "scissors", "fire", "wind", "lightning"],
+    rock:     ["scissors", "fire", "lightning", "sponge", "human"],
+    paper:    ["rock", "water", "lightning", "gun", "tree"],
+    scissors: ["paper", "sponge", "tree", "air", "human"],
+    fire:     ["scissors", "paper", "tree", "sponge", "lightning"],
+    air:      ["fire", "gun", "paper", "rock", "tree"],
+    water:    ["fire", "rock", "gun", "air", "lightning"],
+    sponge:   ["water", "scissors", "air", "tree", "human"],
+    tree:     ["rock", "water", "air", "lightning", "human"],
+    lightning:["scissors", "fire", "gun", "sponge", "paper"],
+    gun:      ["rock", "fire", "scissors", "water", "human"],
+    human:    ["paper", "sponge", "water", "gun", "air"],
 };
 
 const allSigns = Object.keys(beats);
