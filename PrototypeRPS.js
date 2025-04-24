@@ -8,7 +8,22 @@ const insults = [
     "You call that a weapon?",
     "Come on, swing at me!",
     "You fight like a soggy breadstick.",
-    "Your rage is showing, weakling!"
+    "Your rage is showing, weakling!",
+    "Jsi mýtická bytost? Ne, jsi pokročilý tutoriál.",
+    "Máš víc zpoždění než český vlak v zimě.",
+    "Tvoje démonická aura smrdí jako neoptimalizovaný JavaScript.",
+    "Víš proč hrajeme kámen, nůžky, papír? Protože je mi tě líto…",
+    "Tvé 'pradávné síly', jsou jenom převlečené RNG.",
+    "Každý tvůj tah je jako volba prezidenta, pokaždé špatně.",
+    "Tvá hrozba je jako papír v dešti, rozpadne se při prvním tlaku.",
+    "Přijímám tvou výzvu… a tvůj komplex méněcennosti.",
+    "Viděl jsem zkažené jogurty s víc autoritou než ty.",
+    "Jsi noční můra? Maximálně noční vtip.",
+    "Tvoje aura ničí realitu? Ne, tvoje přítomnost ničí atmosféru.",
+    "Smrdíš.",
+    "Ani peklo už ti nezvedá telefony.",
+    "Snažíš se být nonchalant, ale působíš jak edgelord na třídním srazu.",
+    "Ty jsi pradávná hrozba? Ne, jsi bug z betaverze existence."
 ];
 
 // The rules: who beats what
