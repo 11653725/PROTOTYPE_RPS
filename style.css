@@ -1,0 +1,102 @@
+body {
+    background: #11131a;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-container {
+    background: #23263a;
+    padding: 2em;
+    border-radius: 1em;
+    box-shadow: 0 2px 16px #000a;
+    width: 400px;
+    text-align: center;
+}
+
+.boss-section {
+    margin-bottom: 1em;
+    background: #191a25;
+    border-radius: .75em;
+    padding: 1em;
+    box-shadow: 0 1px 4px #0004;
+}
+
+.boss-name {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.rage-bar {
+    margin-top: .5em;
+    font-size: 1.2em;
+    color: #f55;
+}
+
+.signs-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .5em;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.sign-btn {
+    flex: 1 0 40%;
+    background: #272a40;
+    color: #fff;
+    padding: .5em 1em;
+    border: none;
+    border-radius: .5em;
+    font-size: 1em;
+    cursor: pointer;
+    margin: .2em;
+    transition: background 0.2s;
+}
+.sign-btn:disabled {
+    background: #33384d;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.taunt-btn {
+    margin: .5em 0;
+    background: #f8d25d;
+    color: #1a1712;
+    border: none;
+    padding: .5em 1.5em;
+    border-radius: .5em;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s;
+}
+.taunt-btn:disabled {
+    background: #e4c148;
+    color: #888;
+    cursor: not-allowed;
+}
+
+.insult-text {
+    min-height: 1.5em;
+    margin-top: .5em;
+    color: #f99;
+    font-style: italic;
+}
+
+.status-section {
+    margin-top: 1.5em;
+    font-size: 1.1em;
+}
+
+.round-result {
+    margin-top: .7em;
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #7ef78c;
+    min-height: 1.5em;
+}

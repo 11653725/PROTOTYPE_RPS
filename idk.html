@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RPS Warrior - Prototype</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>RPS Warrior: Shadow Knight Showdown</h1>
+        <div class="boss-section">
+            <div class="boss-name">Shadow Knight</div>
+            <div class="rage-bar">Rage: <span id="rage-value">0</span>/50</div>
+        </div>
+        <div class="player-section">
+            <div class="signs-container">
+                <!-- Hand sign buttons -->
+                <button class="sign-btn" data-sign="rock">🪨 Rock</button>
+                <button class="sign-btn" data-sign="paper">📄 Paper</button>
+                <button class="sign-btn" data-sign="scissors">✂️ Scissors</button>
+                <button class="sign-btn" data-sign="fire">🔥 Fire</button>
+                <button class="sign-btn" data-sign="wind">💨 Wind</button>
+                <button class="sign-btn" data-sign="water">💧 Water</button>
+                <button class="sign-btn" data-sign="sponge">🧽 Sponge</button>
+                <button class="sign-btn" data-sign="tree">🌳 Tree</button>
+                <button class="sign-btn" data-sign="lightning">⚡ Lightning</button>
+                <button class="sign-btn" data-sign="gun">🔫 Gun</button>
+            </div>
+            <button id="taunt-btn" class="taunt-btn">Taunt / Insult</button>
+            <div id="insult-text" class="insult-text"></div>
+        </div>
+        <div class="status-section">
+            <div id="round-info">Round: 1</div>
+            <div id="boss-action"></div>
+            <div id="round-result" class="round-result"></div>
+
+        </div>
+    </div>
+    <script src="PrototypeRPS.js"></script>
+</body>
+</html>
