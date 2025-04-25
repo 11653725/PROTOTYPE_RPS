@@ -44,9 +44,11 @@ const beats = {
 const allSigns = Object.keys(beats);
 
 let rage = 0;
+let lastInsultIndex = -1;
 let round = 1;
 const maxRounds = 10;
 let gameEnded = false;
+let disabledBtn = null;
 
 function randomSign() {
     return allSigns[Math.floor(Math.random() * allSigns.length)];
@@ -86,9 +88,16 @@ function endGame() {
 // Taunt button logic
 document.getElementById('taunt-btn').onclick = function() {
     if (gameEnded) return;
-    const selected = insults[Math.floor(Math.random() * insults.length)];
+        let newIndex;
+    do {
+        newIndex = Math.floor(Math.random() * insults.length);
+    } while (newIndex === lastInsultIndex && insults.length > 1);
+
+    lastInsultIndex = newIndex;
+    const selected = insults[newIndex];
+
     document.getElementById('insult-text').textContent = selected.text;
-    document.getElementById('boss-action').textContent = selected.response;
+    document.getElementById('boss-response').textContent = selected.response;
     rage = Math.min(rage + selected.rage, 50);
     document.getElementById('rage-value').textContent = rage;
     document.getElementById('boss-action').textContent = `Boss rage +${selected.rage}!`;
