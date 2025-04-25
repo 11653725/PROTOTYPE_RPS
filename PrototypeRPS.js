@@ -47,8 +47,6 @@ let rage = 0;
 let round = 1;
 const maxRounds = 10;
 let gameEnded = false;
-let disabledBtn = null;    // Track the currently disabled sign
-let tauntDisabled = false; // Track if taunt is disabled
 
 function randomSign() {
     return allSigns[Math.floor(Math.random() * allSigns.length)];
@@ -85,25 +83,9 @@ function endGame() {
     document.getElementById('boss-action').textContent = "";
 }
 
-function bossMagic() {
-    let what = Math.random() < 0.5 ? "sign" : "taunt";
-    if (what === "sign") {
-        const btns = Array.from(document.querySelectorAll('.sign-btn')).filter(btn => !btn.disabled);
-        if (btns.length === 0) return;
-        const randBtn = btns[Math.floor(Math.random() * btns.length)];
-        randBtn.disabled = true;
-        disabledBtn = randBtn;
-        document.getElementById('boss-action').textContent = `Boss magic! ${randBtn.textContent} disabled!`;
-    } else {
-        document.getElementById('taunt-btn').disabled = true;
-        tauntDisabled = true;
-        document.getElementById('boss-action').textContent = "Boss magic! Taunting disabled!";
-    }
-}
-
 // Taunt button logic
 document.getElementById('taunt-btn').onclick = function() {
-    if (gameEnded || tauntDisabled) return;
+    if (gameEnded) return;
     const selected = insults[Math.floor(Math.random() * insults.length)];
     document.getElementById('insult-text').textContent = selected.text;
     document.getElementById('boss-action').textContent = selected.response;
@@ -120,10 +102,6 @@ document.querySelectorAll('.sign-btn').forEach(btn => {
         if (disabledBtn) {
             disabledBtn.disabled = false;
             disabledBtn = null;
-        }
-        if (tauntDisabled) {
-            document.getElementById('taunt-btn').disabled = false;
-            tauntDisabled = false;
         }
         document.getElementById('boss-action').textContent = "";
 
