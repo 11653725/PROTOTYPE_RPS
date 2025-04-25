@@ -104,12 +104,12 @@ function bossMagic() {
 // Taunt button logic
 document.getElementById('taunt-btn').onclick = function() {
     if (gameEnded || tauntDisabled) return;
-    const insult = insults[Math.floor(Math.random() * insults.length)];
-    document.getElementById('insult-text').textContent = insult;
-    // Random rage 1-15
-    const rageAdd = Math.floor(Math.random() * 15) + 1;
-    rage = Math.min(rage + rageAdd, 50);
+    const selected = insults[Math.floor(Math.random() * insults.length)];
+    document.getElementById('insult-text').textContent = selected.text;
+    document.getElementById('boss-action').textContent = selected.response;
+    rage = Math.min(rage + selected.rage, 50);
     document.getElementById('rage-value').textContent = rage;
+    document.getElementById('boss-action').textContent = `Boss rage +${selected.rage}!`;
 };
 
 document.querySelectorAll('.sign-btn').forEach(btn => {
